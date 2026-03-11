@@ -4,7 +4,7 @@ import org.testng.annotations.Test;
 public class Case3 extends BaseTest {
 
     @Test
-    public void case3() throws InterruptedException {
+    public void case3() {
         shopPage.goToShopPage();
         shopPage.clickDresses();
         shopPage.clickRandomDress();

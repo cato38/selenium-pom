@@ -7,7 +7,7 @@ public interface CheckoutInterface {
     void enterPostCode();
     void enterPhone();
     void enterMail();
-    void placeOrder() throws InterruptedException;
+    void placeOrder();
     void enterTown();
     boolean confirmInvalidMessage();
 }

@@ -48,10 +48,11 @@ public class CheckoutPage extends PageObject implements CheckoutInterface {
     }
 
     @Override
-    public void placeOrder() throws InterruptedException {
+    public void placeOrder() {
         super.waitByXpath(CheckoutXpathConstants.PLACE_ORDER);
         super.hoverElementByXpath(CheckoutXpathConstants.PLACE_ORDER);
-        Thread.sleep(5000);
+        // Wait for the button to be clickable again after hover triggers any page update
+        super.waitByXpath(CheckoutXpathConstants.PLACE_ORDER);
         super.clickElementByXpath(CheckoutXpathConstants.PLACE_ORDER);
     }
 
